@@ -4,7 +4,8 @@
     "next/core-web-vitals",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:tailwindcss/recommended"
   ],
   "rules": {
     "no-unused-vars": "off",
@@ -12,5 +13,5 @@
     "@typescript-eslint/no-unused-vars": "off",
     "@next/next/no-img-element": "off"
   },
-  "plugins": ["@typescript-eslint"]
+  "plugins": ["@typescript-eslint", "tailwindcss"]
 }
