@@ -27,7 +27,13 @@ const Footer: FC = () => {
             The code is available on GitHub.
           </p>
         </div>
-        <a className="flex items-end justify-end w-1/2">{githubIcon}</a>
+        <a
+          target="_blank"
+          href="https://github.com/ahoogthomsen/portfolio"
+          className="flex items-end justify-end w-1/2"
+        >
+          {githubIcon}
+        </a>
       </div>
 
       <footer className="py-4">
