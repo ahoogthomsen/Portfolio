@@ -8,8 +8,9 @@ const Hero = () => {
   return (
     <>
       <AnimatedText
+        tag="h1"
         text={[`Hi there,`, `I'm Alexander`]}
-        className="font-semibold text-8xl"
+        className="font-semibold text-6xl md:text-8xl"
       />
 
       <motion.div

@@ -1,4 +1,5 @@
 'use client'
+import { Heading } from '@/components/Heading'
 import { motion } from 'framer-motion'
 import { cn } from 'utils/cn'
 
@@ -34,29 +35,33 @@ const childVariant = {
 const AnimatedText = ({
   text,
   className = '',
+  tag,
 }: {
   text: string[]
   className?: string
+  tag?: string
 }) => {
   return (
-    <motion.div
-      className={cn('overflow-hidden flex flex-col', className)}
-      variants={container}
-      initial="hidden"
-      animate="visible"
-    >
-      {text.map((t, index) => {
-        return (
-          <motion.div key={index}>
-            {t.split('').map((word, index) => (
-              <motion.span variants={childVariant} key={index}>
-                {word}
-              </motion.span>
-            ))}
-          </motion.div>
-        )
-      })}
-    </motion.div>
+    <Heading type="h1">
+      <motion.div
+        className={cn('overflow-hidden flex flex-col', className)}
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        {text.map((t, index) => {
+          return (
+            <motion.div key={index}>
+              {t.split('').map((word, index) => (
+                <motion.span variants={childVariant} key={index}>
+                  {word}
+                </motion.span>
+              ))}
+            </motion.div>
+          )
+        })}
+      </motion.div>
+    </Heading>
   )
 }
 

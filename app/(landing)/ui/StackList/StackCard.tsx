@@ -1,3 +1,4 @@
+import { Heading } from '@/components/Heading'
 import { useMotionValue, motion } from 'framer-motion'
 import { useLayoutEffect, useRef } from 'react'
 import { listItemVariants } from './constants'
@@ -89,10 +90,9 @@ const StackCard = ({ resource }: { resource: IResource }) => {
       <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-zinc-900/7.5 group-hover:ring-zinc-900/10 dark:ring-white/10 dark:group-hover:ring-white/20" />
       <div className="relative rounded-2xl px-4 pt-16 pb-4">
         {resource.icon}
-        <h3 className="mt-4 font-semibold leading-7 text-lg">
-          <span className="absolute inset-0 rounded-2xl" />
+        <Heading type="h3" className="mt-6">
           {resource.name}
-        </h3>
+        </Heading>
         <p className="mt-1 text-white ">{resource.desc}</p>
       </div>
     </motion.li>

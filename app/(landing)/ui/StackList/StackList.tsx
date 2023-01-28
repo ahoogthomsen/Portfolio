@@ -1,5 +1,6 @@
 'use client'
 
+import { Heading } from '@/components/Heading'
 import { motion } from 'framer-motion'
 
 import { techItems, unorderedListVariants } from './constants'
@@ -13,7 +14,7 @@ const StackList = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
       >
-        <h2 className="text-5xl font-bold">The portfolio</h2>
+        <Heading type="h2">The portfolio</Heading>
         <p className="leading-7 [&:not(:first-child)]:mt-6 text-xl text-zinc-400 max-w-2xl">
           This project utilizes various technologies, including next-auth, API
           routes, Vercel edge functions, tailwindcss, framer-motion and Nextjs
