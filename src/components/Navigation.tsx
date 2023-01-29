@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 const items = [
-  { name: 'Projects', href: '/projects' },
-  { name: 'About', href: '/about' },
+  { name: 'Home', href: '/' },
+  { name: 'Guestbook', href: '/guestbook' },
   { name: 'Contact', href: '/contact' },
 ]
 const Navgiation = () => {

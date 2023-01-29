@@ -20,11 +20,14 @@ const Hero = () => {
         transition={{ delay: 0.8, type: 'spring' }}
         className="mt-10 text-xl text-zinc-400 flex items-center"
       >
-        <p className="max-w-lg">
-          I'm a frontend developer who loves creating visually appealing digital
-          experiences. Coding and a warm cup of coffee are my perfect
-          companions. Take a look at my portfolio and let's make something great
-          together!
+        <p>
+          I'm a{' '}
+          <span className="text-emerald-500 font-semibold">
+            frontend developer
+          </span>{' '}
+          who loves creating visually appealing digital experiences. Coding and
+          a warm cup of coffee are my perfect companions. Take a look at my
+          portfolio and let's make something great together!
         </p>
         <Image
           alt="Avatar"
