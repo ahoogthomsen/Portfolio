@@ -22,7 +22,7 @@ const Hero = () => {
       >
         <p>
           I'm a{' '}
-          <span className="text-emerald-600 font-semibold">
+          <span className="text-emerald-500 font-semibold">
             frontend developer
           </span>{' '}
           who loves creating visually appealing digital experiences. Coding and
