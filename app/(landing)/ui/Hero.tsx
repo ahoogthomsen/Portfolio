@@ -18,7 +18,7 @@ const Hero = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.8, type: 'spring' }}
-        className="mt-10 text-xl text-zinc-400 flex items-center"
+        className="mt-10 text-xl text-zinc-400 flex items-start"
       >
         <p>
           I'm a{' '}

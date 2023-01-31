@@ -8,7 +8,7 @@ import StackCard from './StackCard'
 
 const StackList = () => {
   return (
-    <div className="mt-16">
+    <div className="mt-10">
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}

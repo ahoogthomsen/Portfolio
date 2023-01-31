@@ -1,20 +1,26 @@
 import { Heading } from '@/components/Heading'
+import { getServerSession } from 'next-auth/next'
 import { Post } from '@prisma/client'
 
 import { db } from 'lib/db'
 import Form from './ui/Form'
 import List from './ui/List'
+import { authOptions } from 'lib/auth'
 
 async function getPosts(): Promise<Post[]> {
   return await db.post.findMany({
     orderBy: {
       createdAt: 'desc',
     },
+    take: 30,
   })
 }
 
 const GuestBook = async ({}) => {
-  const posts = await getPosts()
+  const [posts, session] = await Promise.all([
+    getPosts(),
+    getServerSession(authOptions),
+  ])
 
   if (!posts) {
     return 'noo :/' //TODO: Add error handler here
@@ -27,7 +33,7 @@ const GuestBook = async ({}) => {
         it's a shoutout, a tidbit of information, a sage suggestion, or a
         chuckle-worthy joke, I'm eager to read what you have in store.
       </p>
-      <Form />
+      <Form isAuthenticated={!!session} />
       <List posts={posts} />
     </div>
   )

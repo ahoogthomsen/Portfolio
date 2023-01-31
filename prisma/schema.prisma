@@ -15,6 +15,7 @@ model Post {
   id       Int    @id @default(autoincrement())
   message     String
   createdAt    DateTime       @default(now()) @map("created_at")
+  author String
 
   @@map("posts")
 }
