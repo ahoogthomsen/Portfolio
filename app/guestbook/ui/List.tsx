@@ -1,5 +1,4 @@
 'use client'
-
 import { motion } from 'framer-motion'
 import { Post } from '@prisma/client'
 import { format } from 'date-fns'
@@ -25,6 +24,7 @@ const item = {
 }
 
 const List: FC<ListProps> = ({ posts }) => {
+  console.log({ posts })
   return (
     <motion.ul
       variants={container}
@@ -41,11 +41,10 @@ const List: FC<ListProps> = ({ posts }) => {
           >
             <div className="w-full">
               <p className="text-emerald-500 mr-1 text-lg mb-1 block font-bold">
-                Author
+                {post.author}
               </p>
-              <p>Text provided from BE here</p>
+              <p>{post.message}</p>
               <time className="text-xs text-slate-300">
-                {' '}
                 {format(new Date(post.createdAt), 'd MMM yyyy')}
               </time>
             </div>
