@@ -7,6 +7,8 @@ import Form from './ui/Form'
 import List from './ui/List'
 import { authOptions } from 'lib/auth'
 
+export const dynamic = 'force-dynamic'
+
 async function getPosts(): Promise<Post[]> {
   return await db.post.findMany({
     orderBy: {
@@ -22,9 +24,6 @@ const GuestBook = async ({}) => {
     getServerSession(authOptions),
   ])
 
-  if (!posts) {
-    return 'noo :/' //TODO: Add error handler here
-  }
   return (
     <div>
       <Heading type="h1">Guestbook</Heading>
