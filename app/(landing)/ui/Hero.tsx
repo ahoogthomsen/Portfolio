@@ -18,7 +18,7 @@ const Hero = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.8, type: 'spring' }}
-        className="mt-10 text-xl text-zinc-400 flex items-start"
+        className="mt-10 text-xl text-zinc-400 flex items-start gap-2"
       >
         <p>
           I'm a{' '}
@@ -33,8 +33,9 @@ const Hero = () => {
           alt="Avatar"
           width={150}
           height={150}
+          //   sizes="(max-width: 500px) 100px, 100px"
           src="/avatar.png"
-          className="rounded-full"
+          className="rounded-full md:w-36 w-24"
         />
       </motion.div>
     </>

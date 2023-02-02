@@ -24,7 +24,6 @@ const item = {
 }
 
 const List: FC<ListProps> = ({ posts }) => {
-  console.log({ posts })
   return (
     <motion.ul
       variants={container}
